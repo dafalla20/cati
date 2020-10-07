@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="LightGreen"
+             x:Class="Pcda.Views.Add">
+  
+    <ContentPage.Content>
+        <StackLayout  VerticalOptions="FillAndExpand" >
+            <StackLayout BackgroundColor="Green"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0">
+
+                 
+                    <StackLayout     Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Margin="0,10,0,0">
+
+
+                        <Image x:Name="Logd" Source="@drawable/Logo"
+       WidthRequest="{OnPlatform iOS=300, Android=50}"
+       HorizontalOptions="Center" />
+
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                            <Label FontSize="Medium" TextColor="White"  
+                           HorizontalTextAlignment="Center" 
+                            FontAttributes="Bold"  >
+                                جمهورية السودان
+                            </Label>
+                            <Label FontSize="Medium" TextColor="White"  
+                           HorizontalTextAlignment="Center" 
+                            FontAttributes="Bold"  >
+                                ولاية الجزيرة - محلية القرشي
+                            </Label>
+                            <Label FontSize="Small" TextColor="White"  
+                           HorizontalTextAlignment="Center" 
+                            FontAttributes="Bold"  >
+                                الهيئة الشعبية لتنمية منطقة العزازي
+                            </Label>
+
+                            <Label FontSize="Large" TextColor="White" x:Name="IDLBL" 
+                           HorizontalTextAlignment="Center" 
+                            FontAttributes="Bold"  >
+
+                            </Label>
+                        </StackLayout>
+
+                    </StackLayout>
+               
+            </StackLayout >
+
+            <ScrollView x:Name="Slidea" >
+            <StackLayout    Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" Margin="0,15,10,0">
+
+
+                 
+                    <StackLayout   VerticalOptions="CenterAndExpand" >
+                    <Frame HasShadow="True"  
+                       BorderColor="DarkGray"
+                       CornerRadius="10" VerticalOptions="FillAndExpand" >
+                        <StackLayout>  
+                                <Image  x:Name="image1"  Aspect="AspectFit" 
+                                Source="@drawable/add" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" /> 
+                            <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="RecordBTN" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="الإحصاء السكاني" VerticalOptions="CenterAndExpand"  Clicked="RecordBTN_Clicked"
+                    FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True"  
+                       BorderColor="DarkGray"
+                       CornerRadius="10" VerticalOptions="FillAndExpand">
+                            <StackLayout >
+                                <Image x:Name="image2"   Aspect="AspectFit" 
+                                Source="@drawable/qurey" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
+                                <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="RecordBTN2" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text=" الدليل المحلي" VerticalOptions="CenterAndExpand"  Clicked="RecordBTN2_Clicked"
+                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame HasShadow="True"  
+                               Opacity="0.7"
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand" >
+                            <StackLayout  >
+                                <Image x:Name="image7" Aspect="AspectFit" 
+                                Source="@drawable/reco" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
+                                <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                          BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="أخرى" VerticalOptions="CenterAndExpand"   
+                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                </StackLayout>
+
+                <StackLayout     
+                    
+           VerticalOptions="CenterAndExpand"  x:Name="Slideb"   >
+                    <Frame HasShadow="True"  
+                       BorderColor="Gray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand" >
+                        <StackLayout >
+                                <Image x:Name="image3"  Aspect="AspectFit" 
+                                Source="@drawable/services" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" /> 
+                            <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="OtherBTN2" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="الخدمات" VerticalOptions="CenterAndExpand"   
+                    FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True"  
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand" >
+                            <StackLayout  >
+                                <Image x:Name="image4" Aspect="AspectFit" 
+                                Source="@drawable/comp" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" /> 
+                                <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="OtherBTN" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="الشكاوى" VerticalOptions="CenterAndExpand"   
+                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame HasShadow="True"  
+                               Opacity="0.7"
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand" >
+                            <StackLayout  >
+                                <Image x:Name="image6" Aspect="AspectFit" 
+                                Source="@drawable/reco" 
+                               HeightRequest="100"
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
+                                <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                          BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="أخرى" VerticalOptions="CenterAndExpand"   
+                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+        </StackLayout>
+            </ScrollView>
+
+            <ScrollView x:Name="Slide0"  IsVisible="false">
+                
+            <StackLayout   VerticalOptions="CenterAndExpand" Margin="30,20,30,50"  >
+                <Frame HasShadow="True" 
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand"   >
+                    <StackLayout  > 
+                        <Entry 
+                    x:Name="NID"   HorizontalTextAlignment="End"
+                    Placeholder="الرقم الوطني" TabIndex="0" TextColor="Black" 
+                    FontSize="Large" MaxLength="10"
+                    Keyboard="Telephone"
+                    ClearButtonVisibility="WhileEditing" 
+                    AutomationProperties.IsInAccessibleTree="True" 
+                      HorizontalOptions="Fill" 
+                     VerticalOptions="CenterAndExpand" 
+                            Margin="0,30,0,50"
+                    BackgroundColor="White"/> 
+                        <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="BTN0" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" Opacity="0.8"
+                        Text="إبدأ" VerticalOptions="CenterAndExpand"  Clicked="BTN0_Clicked"
+                    FontAttributes="Bold"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+            </ScrollView>
+
+            <ScrollView x:Name="Slide1" IsVisible="false">
+                
+            <StackLayout     
+           VerticalOptions="FillAndExpand"
+                 Margin="30,20,30,20"
+                         Orientation="Vertical"  > 
+                <Frame HasShadow="True" 
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand"   >
+                    <StackLayout  > 
+                        <Entry 
+                    x:Name="Name"  HorizontalTextAlignment="Start"
+                    Placeholder="الإسم" TabIndex="0" TextColor="Black" 
+                    FontSize="Large" MaxLength="100"
+                    ClearButtonVisibility="WhileEditing" 
+                    AutomationProperties.IsInAccessibleTree="True" 
+                      HorizontalOptions="Fill"  
+                    BackgroundColor="White"/>  
+                        <Picker x:Name="City"
+                        Title=" اختار القرية "  >
+                            <Picker.ItemsSource >
+                                <x:Array Type="{x:Type x:String}" >
+                                    <x:String>العزازي</x:String>
+                                    <x:String>أبدون</x:String>
+                                    <x:String>شكير</x:String>
+                                    <x:String>أم شديدة</x:String>
+                                    <x:String>السانية</x:String>
+                                    <x:String>الفقوسة</x:String>
+                                    <x:String>الجديدة</x:String>
+                                    <x:String>الشكرية</x:String>
+                                    <x:String>المطيمر </x:String>
+                                    <x:String>القليز</x:String>
+                                    <x:String>عدار</x:String>
+                                    <x:String>بلومة</x:String>
+                                    <x:String>النو</x:String>
+                                    <x:String>الهميج</x:String>
+                                    <x:String>منير</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker> 
+                        <Picker x:Name="Age"
+                               VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="End"
+                    
+                        Title=" سجل العمر "    >
+                            <Picker.ItemsSource 
+                                
+                               VerticalOptions="CenterAndExpand" >
+                                <x:Array Type="{x:Type x:String}"  >
+                                    <x:String>سنة</x:String>
+                                    <x:String>سنتين</x:String>
+                                    <x:String> 3 سنوات</x:String>
+                                    <x:String>4 سنوات</x:String>
+                                    <x:String>5 سنوات</x:String>
+                                    <x:String>6 سنوات</x:String>
+                                    <x:String>7 سنوات</x:String>
+                                    <x:String>8 سنوات</x:String>
+                                    <x:String>9 سنوات</x:String>
+                                    <x:String>10 سنوات</x:String>
+                                    <x:String>   سنة  11</x:String>
+                                    <x:String>   سنة  12</x:String>
+                                    <x:String>   سنة  13</x:String>
+                                    <x:String>   سنة  14</x:String>
+                                    <x:String>   سنة  15</x:String>
+                                    <x:String>   سنة  16</x:String>
+                                    <x:String>   سنة  17</x:String>
+                                    <x:String>   سنة  18</x:String>
+                                    <x:String>   سنة  19</x:String>
+                                    <x:String>   سنة  20</x:String>
+                                    <x:String>   سنة  21</x:String>
+                                    <x:String>   سنة  22</x:String>
+                                    <x:String>   سنة  23</x:String>
+                                    <x:String>   سنة  24</x:String>
+                                    <x:String>   سنة  25</x:String>
+                                    <x:String>   سنة  26</x:String>
+                                    <x:String>   سنة  27</x:String>
+                                    <x:String>   سنة  28</x:String>
+                                    <x:String>   سنة  29</x:String>
+                                    <x:String>   سنة  30</x:String>
+                                    <x:String>   سنة  31</x:String>
+                                    <x:String>   سنة  32</x:String>
+                                    <x:String>   سنة  33</x:String>
+                                    <x:String>   سنة  34</x:String>
+                                    <x:String>   سنة  35</x:String>
+                                    <x:String>   سنة  36</x:String>
+                                    <x:String>   سنة  37</x:String>
+                                    <x:String>   سنة  38</x:String>
+                                    <x:String>   سنة  39</x:String>
+                                    <x:String>   سنة  40</x:String>
+                                    <x:String>   سنة  41</x:String>
+                                    <x:String>   سنة  42</x:String>
+                                    <x:String>   سنة  43</x:String>
+                                    <x:String>   سنة  44</x:String>
+                                    <x:String>   سنة  45</x:String>
+                                    <x:String>   سنة  46</x:String>
+                                    <x:String>   سنة  47</x:String>
+                                    <x:String>   سنة  48</x:String>
+                                    <x:String>   سنة  49</x:String>
+                                    <x:String>   سنة  50</x:String>
+                                
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                                 
+                            </Grid.ColumnDefinitions> 
+                              
+                            <TableView Intent="Settings"  Grid.Column="1" >
+                                <TableSection >
+                                    <ViewCell>
+                                        <Label FontSize="Medium" Margin="0,10,0,0">
+                                            الجنس :
+                                        </Label>
+                                    </ViewCell>
+                                    <SwitchCell Text="ذكر"  
+                                      x:Name="GenderSwitchMale"          
+                                       OnColor="DarkBlue" 
+                                       OnChanged="GenderSwitchMale_OnChanged" />
+                                    <ViewCell>
+                                        <Label FontSize="Medium" Margin="0,10,0,0">
+                                            الحالة الاجتماعية :
+                                        </Label>
+                                    </ViewCell>
+                                    <SwitchCell Text="متزوج"  
+                                      x:Name="MaritalSwitchyes"
+                                     OnColor="DarkBlue" 
+                                      OnChanged="MaritalSwitchyes_OnChanged" />
+                                 
+                                </TableSection>
+                            </TableView>
+                            <TableView Intent="Settings"    Grid.Column="0" > 
+                                <TableSection >
+                                    <ViewCell><Label ></Label></ViewCell> 
+                                    <SwitchCell Text="أنثى"  
+                                      x:Name="GenderSwitchFeMale" 
+                                      OnChanged="GenderSwitchFeMale_OnChanged" />
+
+                                    <ViewCell> <Label >  </Label>  </ViewCell>
+                                    <SwitchCell Text="أعزب"  
+                                     OnColor="DarkBlue"      
+                                      x:Name="MaritalSwitchNo" 
+                                      OnChanged="MaritalSwitchNo_OnChanged" />
+                                </TableSection> 
+                            </TableView>
+                        </Grid>
+                            <StackLayout>
+                                
+                        <Picker x:Name="Wifes"
+                                VerticalOptions="StartAndExpand"
+                        Title="   عدد الزوجات : "  IsVisible="false"  >
+                            <Picker.ItemsSource   >
+                                <x:Array Type="{x:Type x:String}"   >
+                           
+                                    <x:String>زوجة واحدة </x:String>
+                                    <x:String>زوجتان</x:String>
+                                    <x:String>ثلاث زوجات</x:String>
+                                    <x:String>أربع زوجات</x:String>
+                                
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Picker x:Name="chiled" 
+                                VerticalOptions="StartAndExpand"
+                                
+                        Title="   عدد الابناء الغير متزوجين : "  IsVisible="false"  >
+                                <Picker.ItemsSource >
+                                    <x:Array Type="{x:Type x:String}"   >
+                                        <x:String>لايوجد </x:String>
+                                    <x:String>واحد</x:String>
+                                        <x:String>أثنين</x:String>
+                                        <x:String> 3 أبناء</x:String>
+                                    <x:String>أبناء 4</x:String>
+                                    <x:String>5 أبناء</x:String>
+                                    <x:String>6 أبناء</x:String>
+                                    <x:String>7 أبناء</x:String>
+                                    <x:String>8 أبناء</x:String>
+                                    <x:String>9 أبناء</x:String>
+                                    <x:String>10 أبناء</x:String>
+                                        <x:String>11 إبن</x:String>
+                                        <x:String>12 إبن</x:String>
+                                        <x:String>13 إبن</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker> 
+                            </StackLayout>
+                    </StackLayout> 
+                </Frame>
+ 
+            </StackLayout>
+            </ScrollView>
+
+            <ScrollView  x:Name="Slide2"  IsVisible="false">
+                
+            <StackLayout     
+           VerticalOptions="FillAndExpand"
+                 Margin="30,100,30,100"
+                         Orientation="Vertical" >
+                <Frame HasShadow="True" 
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand"   >
+                    <StackLayout >
+
+                        <Picker x:Name="Edu"
+                               VerticalOptions="Center"
+                                    Margin="0,0,0,10"
+                        Title="المستوى التعليمي " >
+                            <Picker.ItemsSource 
+                               VerticalOptions="CenterAndExpand" >
+                                <x:Array Type="{x:Type x:String}"   >
+                                    <x:String>قبل المدرسي</x:String>
+                                    <x:String>اساس</x:String>
+                                    <x:String>ثانوي</x:String>
+                                    <x:String>جامعي</x:String> 
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Entry 
+                    x:Name="Job"  HorizontalTextAlignment="Start"
+                    Placeholder="المهنة" TabIndex="0" TextColor="Black" 
+                    FontSize="Large" MaxLength="100"
+                    ClearButtonVisibility="WhileEditing" 
+                    AutomationProperties.IsInAccessibleTree="True" 
+                      HorizontalOptions="Fill"  
+                    BackgroundColor="White"/>
+                        <Entry 
+                    x:Name="Phone"   HorizontalTextAlignment="End"
+                    Placeholder="رقم التلفون" TabIndex="0" TextColor="Black" 
+                    FontSize="Large" MaxLength="10"
+                    Keyboard="Telephone"
+                    ClearButtonVisibility="WhileEditing" 
+                    AutomationProperties.IsInAccessibleTree="True" 
+                      HorizontalOptions="Fill" 
+                    BackgroundColor="White"/> 
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+            </ScrollView>
+
+            <ScrollView  x:Name="Slide3"  IsVisible="false">
+                
+            <StackLayout     
+           VerticalOptions="FillAndExpand"
+                 Margin="30,20,30,20"
+                         Orientation="Vertical" >
+                <Frame HasShadow="True" 
+                       BorderColor="DarkGray"
+                       CornerRadius="10"  
+                           VerticalOptions="FillAndExpand"   > 
+
+                    <StackLayout    Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Margin="5,5,5,10">
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+ 
+                                <TableView Intent="Settings"  >
+                                    <TableSection >
+                                    <ViewCell>
+                                        <Label x:Name="NationalIdLBL" >الرقم الوطني : </Label>
+                                    </ViewCell>
+                                    <ViewCell>
+                                            <Label x:Name="NameLBL" > الاسم : </Label>
+                                        </ViewCell>
+                                        <ViewCell>
+                                        <Label x:Name="GenderLBL" >الجنس : </Label>
+                                        </ViewCell>
+                                        <ViewCell>
+                                        <Label x:Name="AgeLBL" >العمر :</Label>
+                                        </ViewCell>
+                                        <ViewCell>
+                                        <Label x:Name="MarLBL" >الحالة الاجتماعية :</Label>
+                                        </ViewCell>
+                                    <ViewCell>
+                                        <Label x:Name="CityLBL" >القرية :</Label>
+                                    </ViewCell>
+                                    <ViewCell>
+                                        <Label x:Name="EduLBL" >المستوى التعليمي  :</Label>
+                                    </ViewCell> 
+                                    <ViewCell>
+                                        <Label x:Name="JobLBL" >المستوى التعليمي  :</Label>
+                                    </ViewCell>
+                                    <ViewCell>
+                                        <Label x:Name="PhoneLBL" >المستوى التعليمي  :</Label>
+                                    </ViewCell>
+                                </TableSection>
+                                </TableView> 
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+            </ScrollView> 
+            <StackLayout x:Name="Nav" IsVisible="false" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Margin="5,5,5,10">
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                    <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="NextBTN" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White"  
+                        Text="التالي"    Clicked="NextBTN_Clicked" 
+                    FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                  
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+
+                    <Button BorderColor="#A6D8ED" BorderWidth="2" BorderRadius="20"
+                        x:Name="BackBTN" BackgroundColor="Green" 
+                        TabIndex="2" TextColor="White" 
+                                        Text="رجوع" 
+                                Clicked="BackBTN_Clicked" 
+                    FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
